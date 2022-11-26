@@ -35,6 +35,8 @@ Citizen.CreateThread(function()
                 TriggerServerEvent("lwr:updateHeliBlip", x,y,z,model,ped)
             end
 
+        elseif ((IsPedInAnyHeli(GetPlayerPed(-1), false)) or (IsPedInAnyPlane(GetPlayerPed(-1), false))) then
+
         else
             local ped = GetPlayerPed(-1)
             TriggerServerEvent("lwr:removeBlip", ped)
