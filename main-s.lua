@@ -5,3 +5,7 @@ end)
 RegisterServerEvent("lwr:updateHeliBlip", function(x,y,z,model,ped)
     TriggerClientEvent("lwr:updatingHeliClient", -1, x,y,z,model,ped)
 end)
+
+RegisterServerEvent("lwr:removeBlip", function(ped)
+    TriggerClientEvent("lwr:removingBlips", -1, ped)
+end)
